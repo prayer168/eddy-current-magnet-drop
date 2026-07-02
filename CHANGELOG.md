@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v1.2.0 - 2026-07-02
+
+- 新增社群分享縮圖（assets/images/og-cover.png，1200×630）
+- 全部頁面加入 Open Graph 與 Twitter Card meta 標籤，分享到 Facebook 會顯示網站縮圖卡片
+
 ## v1.1.0 - 2026-07-02
 
 - 新增中英雙語 Facebook 介紹文一鍵複製頁（share/facebook-post.html）
