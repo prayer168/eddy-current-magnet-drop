@@ -30,6 +30,7 @@
 - **素養導向闖關**：10 題情境／數據判讀題，附解析與回看連結
 - **進度保存**：localStorage 跨頁記錄單元完成度與最佳成績
 - **無障礙**：鍵盤操作、aria-label、`prefers-reduced-motion` 支援
+- **社群分享**：內建 1200×630 分享縮圖與 Open Graph 標籤，貼到 Facebook/LINE 顯示網站卡片
 
 ## 頁籤內容
 

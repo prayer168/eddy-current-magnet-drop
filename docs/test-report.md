@@ -20,6 +20,7 @@
 | 自主學習外部連結 | ✅ | 8 筆均 target=_blank + rel=noopener |
 | 進度跨頁記錄 | ✅ | 導覽列出現 6 個完成勾號 |
 | 雙語臉書文複製頁（share/facebook-post.html） | ✅ | 中/英/全部三顆複製鈕實測：按鈕顯示「已複製！/Copied!」、剪貼簿內容正確（複製全部含中英與分隔線） |
+| 社群分享縮圖與 OG meta | ✅ | og-cover.png（1200×630）線上 HTTP 200；全部 8 頁含 og/twitter meta，og:image 為絕對網址（首頁原始碼實測） |
 
 ## 內容檢查
 
