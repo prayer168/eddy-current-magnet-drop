@@ -1,0 +1,192 @@
+/* ============ 通用動畫 ============ */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeInUp 0.4s ease both; }
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+@keyframes spinCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes spinCCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes dashFlow {
+  to { stroke-dashoffset: -40; }
+}
+
+/* SVG 子元素變形基準（務必） */
+.tf { transform-box: fill-box; transform-origin: center; }
+
+/* ============ sim：渦電流箭頭與磁鐵 ============ */
+.eddy-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulseSoft 1.6s ease-in-out infinite;
+}
+.field-arrow { animation: pulseSoft 1.8s ease-in-out infinite; }
+
+@keyframes magnetSlowFall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(150px); }
+}
+@keyframes magnetFastFall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(150px); }
+}
+.sim-magnet-slow {
+  transform-box: fill-box;
+  animation: magnetSlowFall 6s linear infinite;
+}
+.sim-magnet-fast {
+  transform-box: fill-box;
+  animation: magnetFastFall 1.2s linear infinite;
+}
+
+@keyframes forceArrowPulse {
+  0%, 100% { opacity: 0.5; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-4px); }
+}
+.force-arrow { transform-box: fill-box; animation: forceArrowPulse 1.2s ease-in-out infinite; }
+
+@keyframes heatShimmer {
+  0%, 100% { opacity: 0.15; transform: translateY(0); }
+  50% { opacity: 0.7; transform: translateY(-5px); }
+}
+.heat-wave { transform-box: fill-box; animation: heatShimmer 1.5s ease-in-out infinite; }
+
+/* ============ lab：落下動畫（時間由 JS 設定 --fall-dur） ============ */
+@keyframes labFall {
+  from { transform: translateY(0); }
+  to { transform: translateY(var(--fall-dist, 240px)); }
+}
+.lab-falling {
+  transform-box: fill-box;
+  animation: labFall var(--fall-dur, 2s) linear forwards;
+}
+
+/* ============ 生活應用動畫（每則專屬） ============ */
+
+/* --- train 電磁煞車 --- */
+@keyframes trainDecel {
+  0% { transform: translateX(150px); }
+  70% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+.anim-train-body { transform-box: fill-box; animation: trainDecel 4s cubic-bezier(0.2, 0.8, 0.6, 1) infinite; }
+@keyframes railEddy {
+  0%, 15% { opacity: 0; }
+  30%, 75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.anim-train-eddy { animation: railEddy 4s ease infinite; }
+.anim-train-heat { transform-box: fill-box; animation: heatShimmer 1.3s ease-in-out infinite; }
+
+/* --- tower 自由落體 --- */
+@keyframes towerDrop {
+  0% { transform: translateY(0); }
+  45% { transform: translateY(120px); }   /* 高速自由落下 */
+  80% { transform: translateY(168px); }   /* 進入銅板區急減速 */
+  92%, 100% { transform: translateY(172px); }
+}
+.anim-tower-cart { transform-box: fill-box; animation: towerDrop 4.5s cubic-bezier(0.45, 0, 0.6, 1) infinite; }
+@keyframes towerEddyOn {
+  0%, 44% { opacity: 0; }
+  55%, 90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.anim-tower-eddy { animation: towerEddyOn 4.5s ease infinite; }
+.anim-tower-brakearrow { transform-box: fill-box; animation: towerEddyOn 4.5s ease infinite; }
+
+/* --- cooktop 電磁爐 --- */
+@keyframes fieldWave {
+  0%, 100% { opacity: 0.2; transform: translateY(0) scale(1); }
+  50% { opacity: 0.9; transform: translateY(-6px) scale(1.05); }
+}
+.anim-cook-field { transform-box: fill-box; animation: fieldWave 1.4s ease-in-out infinite; }
+.anim-cook-field.d2 { animation-delay: 0.35s; }
+.anim-cook-field.d3 { animation-delay: 0.7s; }
+.anim-cook-eddy { transform-box: fill-box; transform-origin: center; animation: pulseSoft 1.2s ease-in-out infinite; }
+@keyframes steamRise {
+  0% { opacity: 0; transform: translateY(6px); }
+  40% { opacity: 0.8; }
+  100% { opacity: 0; transform: translateY(-16px); }
+}
+.anim-cook-steam { transform-box: fill-box; animation: steamRise 2.2s ease-out infinite; }
+.anim-cook-steam.d2 { animation-delay: 0.8s; }
+
+/* --- detector 金屬探測器 --- */
+@keyframes ringExpand {
+  0% { opacity: 0.9; transform: scale(0.4); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+.anim-det-ring { transform-box: fill-box; transform-origin: center; animation: ringExpand 1.8s ease-out infinite; }
+.anim-det-ring.d2 { animation-delay: 0.6s; }
+.anim-det-ring.d3 { animation-delay: 1.2s; }
+.anim-det-eddy { transform-box: fill-box; transform-origin: center; animation: pulseSoft 1.2s ease-in-out infinite; }
+@keyframes beepBlink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+.anim-det-beep { animation: beepBlink 0.9s steps(2, start) infinite; }
+
+/* --- sorter 渦電流分選 --- */
+@keyframes beltMove {
+  to { stroke-dashoffset: -24; }
+}
+.anim-sort-belt { animation: beltMove 1s linear infinite; }
+@keyframes drumSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.anim-sort-drum { transform-box: fill-box; transform-origin: center; animation: drumSpin 1.6s linear infinite; }
+@keyframes alCanFly {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+  15% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+  60% { transform: translate(95px, -34px) rotate(40deg); opacity: 1; }
+  100% { transform: translate(150px, 40px) rotate(90deg); opacity: 0; }
+}
+.anim-sort-alcan { transform-box: fill-box; animation: alCanFly 3.2s ease-in-out infinite; }
+@keyframes glassDrop {
+  0%, 20% { transform: translate(0, 0); opacity: 1; }
+  70% { transform: translate(28px, 70px); opacity: 1; }
+  100% { transform: translate(28px, 76px); opacity: 0; }
+}
+.anim-sort-glass { transform-box: fill-box; animation: glassDrop 3.2s ease-in infinite; }
+
+/* --- meter 儀表止震 --- */
+@keyframes needleDamped {
+  0% { transform: rotate(-40deg); }
+  18% { transform: rotate(26deg); }
+  34% { transform: rotate(-14deg); }
+  48% { transform: rotate(7deg); }
+  60% { transform: rotate(-2deg); }
+  70%, 100% { transform: rotate(0deg); }
+}
+.anim-meter-needle {
+  transform-box: fill-box;
+  transform-origin: 50% 92%;
+  animation: needleDamped 4s ease-out infinite;
+}
+.anim-meter-eddy { transform-box: fill-box; transform-origin: center; animation: pulseSoft 1s ease-in-out infinite; }
+
+/* ============ 降低動畫偏好 ============ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+  html { scroll-behavior: auto; }
+}

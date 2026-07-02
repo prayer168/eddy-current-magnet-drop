@@ -1,0 +1,68 @@
+{
+  "resources": [
+    {
+      "title": "PhET 互動模擬：法拉第電磁實驗室",
+      "url": "https://phet.colorado.edu/zh_TW/simulations/faradays-electromagnetic-lab",
+      "type": "互動模擬",
+      "grade": "國中",
+      "description": "拖動磁鐵穿過線圈，即時看到感應電流與燈泡亮度變化，是理解電磁感應最直觀的免費模擬。",
+      "checkedAt": "2026-07-02"
+    },
+    {
+      "title": "PhET 互動模擬：法拉第定律",
+      "url": "https://phet.colorado.edu/zh_TW/simulations/faradays-law",
+      "type": "互動模擬",
+      "grade": "國中",
+      "description": "簡化版電磁感應模擬，適合快速觀察「磁鐵動得愈快、感應電流愈大」的關係。",
+      "checkedAt": "2026-07-02"
+    },
+    {
+      "title": "均一教育平台：電磁感應相關課程",
+      "url": "https://www.junyiacademy.org/",
+      "type": "影片課程",
+      "grade": "國中",
+      "description": "搜尋「電磁感應」可找到配合國中課綱的教學影片與練習題，可依自己的步調反覆觀看。",
+      "checkedAt": "2026-07-02"
+    },
+    {
+      "title": "教育部因材網",
+      "url": "https://adl.edu.tw/",
+      "type": "適性學習平台",
+      "grade": "國中",
+      "description": "教育部官方適性教學平台，「自然科學—電與磁」單元有診斷測驗與補救教材。",
+      "checkedAt": "2026-07-02"
+    },
+    {
+      "title": "科技大觀園（國科會）",
+      "url": "https://scitechvista.nat.gov.tw/",
+      "type": "科普文章",
+      "grade": "國中",
+      "description": "國科會科普網站，搜尋「渦電流」「電磁感應」可讀到電磁煞車、感應充電等延伸文章。",
+      "checkedAt": "2026-07-02"
+    },
+    {
+      "title": "LIS 情境科學教材",
+      "url": "https://lis.org.tw/",
+      "type": "科學史影片",
+      "grade": "國中",
+      "description": "用戲劇方式演出法拉第等科學家的發現歷程，了解電磁感應是怎麼被發現的。",
+      "checkedAt": "2026-07-02"
+    },
+    {
+      "title": "國立臺灣科學教育館",
+      "url": "https://www.ntsec.gov.tw/",
+      "type": "場館資源",
+      "grade": "國中",
+      "description": "常設展有電與磁互動展區，可以親手玩到大型渦電流落管與感應實驗裝置。",
+      "checkedAt": "2026-07-02"
+    },
+    {
+      "title": "臺大科學教育發展中心 CASE",
+      "url": "https://case.ntu.edu.tw/",
+      "type": "科普專欄",
+      "grade": "國中（進階）",
+      "description": "大學層級的科普文章與演講影片，適合想更深入了解電磁學的同學挑戰閱讀。",
+      "checkedAt": "2026-07-02"
+    }
+  ]
+}

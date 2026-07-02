@@ -1,0 +1,33 @@
+/* ===== 平板以下 ===== */
+@media (max-width: 820px) {
+  .lab-panel { grid-template-columns: 1fr; }
+  .var-grid { grid-template-columns: 1fr; }
+  .step-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ===== 手機 ===== */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .container { padding: 16px 14px 56px; }
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.2rem; }
+
+  .apply-grid { grid-template-columns: 1fr; }
+  .step-grid { grid-template-columns: 1fr; }
+  .tester-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .site-header .brand strong { font-size: 1.05rem; }
+  .tab-nav a { padding: 9px 12px; font-size: 0.88rem; }
+
+  .pager { flex-direction: column; }
+  .pager a { justify-content: center; }
+  .pager .spacer { display: none; }
+
+  .stage-flow { gap: 3px; }
+  .stage-flow button { font-size: 0.8rem; padding: 7px 9px; }
+}
+
+/* ===== 大螢幕 ===== */
+@media (min-width: 1200px) {
+  .container { max-width: 1020px; }
+}
