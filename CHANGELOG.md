@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v1.1.0 - 2026-07-02
+
+- 新增中英雙語 Facebook 介紹文一鍵複製頁（share/facebook-post.html）
+- 複製按鈕支援剪貼簿 API 與 fallback、深色模式、手機版面
+
 ## v1.0.0 - 2026-07-02 正式發布
 
 - 完成品質檢核（功能／內容／技術），報告見 docs/test-report.md

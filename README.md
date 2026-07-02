@@ -42,6 +42,7 @@
 | `apply.html` 生活應用 | 六則渦電流應用（每則專屬動畫） |
 | `quiz.html` 闖關大挑戰 | 10 題素養導向測驗、計分與學習建議 |
 | `resources.html` 自主學習 | 8 個延伸學習資源 |
+| `share/facebook-post.html` | 中英雙語臉書介紹文，一鍵複製 |
 
 ## 使用方式
 

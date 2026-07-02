@@ -14,7 +14,7 @@
   "audio": false,
   "progressTracking": true,
   "teacherGuide": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "pages": ["index", "explore", "lab", "sim", "apply", "quiz", "resources"],
   "deploy": {
     "target": "github-pages",
