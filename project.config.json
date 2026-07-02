@@ -1,0 +1,24 @@
+{
+  "projectName": "eddy-current-magnet-drop",
+  "titleZh": "磁鐵慢動作的祕密——鋁箔紙與渦電流探究",
+  "repo": "eddy-current-magnet-drop",
+  "level": "國中",
+  "grade": "八～九年級",
+  "subject": "自然科學",
+  "durationMinutes": 40,
+  "mode": "快速模式",
+  "style": "清爽、教學寫實",
+  "applications": 6,
+  "quizCount": 10,
+  "resourceCount": 8,
+  "audio": false,
+  "progressTracking": true,
+  "teacherGuide": true,
+  "version": "0.1.0",
+  "pages": ["index", "explore", "lab", "sim", "apply", "quiz", "resources"],
+  "deploy": {
+    "target": "github-pages",
+    "owner": "prayer168",
+    "pagesUrl": "https://prayer168.github.io/eddy-current-magnet-drop/"
+  }
+}
